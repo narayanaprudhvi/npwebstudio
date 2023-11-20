@@ -29,6 +29,9 @@
 .rg100 {
     row-gap: 100px !important;
 }
+.banner-main{
+  margin: 200px 0 100px 0;
+}
 .portfolio-container.container {
     margin: 20px auto;
     display: flex;
@@ -404,6 +407,16 @@ button {
     padding: 70px;
   }
 }
+.quality-cards{
+  background: #DFF6FF;
+  border-radius: 20px;
+  padding: 30px;
+}
+.quality-cards-main{
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(350px, 1fr));
+  gap: 50px;
+}
 @media screen and (max-width : 900px) {
   .contact-single-card.contact-form-card {
     margin-top: 50px;
@@ -440,6 +453,9 @@ button {
   }
   .l--0{
     left: 0 !important;
+  }
+  .banner-main{
+    margin: 150px 0 60px 0;
   }
 }
 #scrollTopBtn {

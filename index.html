@@ -25,7 +25,10 @@
   </head>
   <body>
     <!-- header -->
-    <nav class="navbar navbar-expand-lg align-items-center">
+    <nav
+      class="navbar navbar-expand-lg align-items-center"
+      style="position: fixed; top: 0; width: 100%; z-index: 1050"
+    >
       <div class="container justify-content-between">
         <a class="navbar-brand">
           <img src="./images/np-web-studio-logo.png" />
@@ -112,8 +115,8 @@
     <!-- header -->
 
     <!-- home section -->
-    <main class="header-main container my-5 position-relative">
-      <div class="d-md-flex">
+    <main class="banner-main container position-relative">
+      <div class="d-md-flex mt-4">
         <div class="col-md-5">
           <h1 class="fs50 lh62 fw600">
             We are specialize in UI/UX, Web Development with top frameworks and
@@ -175,61 +178,63 @@
     <!-- home section -->
 
     <!-- app- hero bottom part -->
-    <main class="hero-bottom my-5 py-5 container">
-      <h1 class="blue fs40 lh50 fw600 justify-content-center d-flex">
-        Ready to take your digital journey to the next level?
-      </h1>
-      <h1
-        class="blue fs40 fw600 lh50 justify-content-center d-flex mt-4 underline"
-      >
-        Contact us today to get started...
-      </h1>
-      <div class="mt-5 d-md-flex justify-content-between grid g50">
-        <div class="col-md-3 d-flex justify-content-between">
-          <div
-            class="height-content p30 brr50"
-            style="background: rgb(243 106 141)"
-          >
-            <img src="./images/icon-01.svg" alt="icon 01" />
+    <main class="hero-bottom my-5 py-5" style="background: rgb(236 240 245)">
+      <div class="container">
+        <h1 class="blue fs40 lh50 fw600 justify-content-center d-flex">
+          Ready to take your digital journey to the next level?
+        </h1>
+        <h1
+          class="blue fs40 fw600 lh50 justify-content-center d-flex mt-4 underline"
+        >
+          Contact us today to get started...
+        </h1>
+        <div class="mt-5 d-md-flex justify-content-between grid g50">
+          <div class="col-md-3 d-flex justify-content-between">
+            <div
+              class="height-content p30 brr50"
+              style="background: rgb(243 106 141)"
+            >
+              <img src="./images/icon-01.svg" alt="icon 01" />
+            </div>
+            <div class="ms-4">
+              <h1 class="fs26 fw500">24*7 Support</h1>
+              <p class="grey mt-3 lh22 fs16">
+                Experience peace of mind with our round-the-clock 24/7 support,
+                ensuring your product is always in safe hands
+              </p>
+            </div>
           </div>
-          <div class="ms-4">
-            <h1 class="fs26 fw500">24*7 Support</h1>
-            <p class="grey mt-3 lh22 fs16">
-              Experience peace of mind with our round-the-clock 24/7 support,
-              ensuring your product is always in safe hands
-            </p>
-          </div>
-        </div>
 
-        <div class="col-md-3 d-flex justify-content-between">
-          <div
-            class="height-content p30 brr50"
-            style="background: rgb(32 202 102)"
-          >
-            <img src="./images/icon-02.svg" alt="icon 01" />
+          <div class="col-md-3 d-flex justify-content-between">
+            <div
+              class="height-content p30 brr50"
+              style="background: rgb(32 202 102)"
+            >
+              <img src="./images/icon-02.svg" alt="icon 01" />
+            </div>
+            <div class="ms-4">
+              <h1 class="fs26 fw500">Take Ownership</h1>
+              <p class="grey mt-3 lh22 fs16">
+                We take ownership of your goals, turning your vision into our
+                mission for success.
+              </p>
+            </div>
           </div>
-          <div class="ms-4">
-            <h1 class="fs26 fw500">Take Ownership</h1>
-            <p class="grey mt-3 lh22 fs16">
-              We take ownership of your goals, turning your vision into our
-              mission for success.
-            </p>
-          </div>
-        </div>
 
-        <div class="col-md-3 d-flex justify-content-between">
-          <div
-            class="height-content p30 brr50"
-            style="background: rgb(250 145 97)"
-          >
-            <img src="./images/icon-03.svg" alt="icon 01" />
-          </div>
-          <div class="ms-4">
-            <h1 class="fs26 fw500">Team Work</h1>
-            <p class="grey mt-3 lh22 fs16">
-              We believe in the power of teamwork, where every member's
-              contribution is a vital piece in achieving greatness together.
-            </p>
+          <div class="col-md-3 d-flex justify-content-between">
+            <div
+              class="height-content p30 brr50"
+              style="background: rgb(250 145 97)"
+            >
+              <img src="./images/icon-03.svg" alt="icon 01" />
+            </div>
+            <div class="ms-4">
+              <h1 class="fs26 fw500">Team Work</h1>
+              <p class="grey mt-3 lh22 fs16">
+                We believe in the power of teamwork, where every member's
+                contribution is a vital piece in achieving greatness together.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -276,7 +281,7 @@
           </div>
           <div class="col-md-5 mt-5">
             <h1 class="fs30 fw600 blue underline">Why Choose Us</h1>
-            <h2 class="fs40 lh52 fw500 mt-4">
+            <h2 class="fs40 lh52 fw600 mt-4">
               We understand that choosing a web development partner is a
               critical decision for your business.
             </h2>
@@ -335,7 +340,7 @@
       </div>
       <section
         class="mt-100 position-relative about-projects"
-        style="background: rgb(244 247 250);"
+        style="background: rgb(244 247 250)"
       >
         <div class="col-md-8 d-flex mx-auto text-center">
           <h1 class="fs-md-466 fs46 lh66 fw600">
@@ -346,7 +351,7 @@
         </div>
       </section>
       <img
-        class="position-absolute shapess"
+        class="position-absolute dnn"
         style="bottom: 48px; width: 100%"
         src="./images/shape-08.svg"
         alt="shapes"
@@ -388,8 +393,8 @@
           solutions.
         </p>
       </section>
-      <section class="mt-5 quality-parts row rg100">
-        <div class="col-md-4">
+      <section class="mt-5 quality-parts quality-cards-main">
+        <div class="quality-cards">
           <img src="./images/icon-04.svg" alt="icon" />
           <h1 class="fs26 fw500 mt-4">Crafted for All</h1>
           <p class="mt-4 grey lh28 fs18">
@@ -401,7 +406,7 @@
             making the web a more inclusive space for everyone.
           </p>
         </div>
-        <div class="col-md-4">
+        <div class="quality-cards">
           <img src="./images/icon-05.svg" alt="icon" />
           <h1 class="fs26 fw500 mt-4">High-quality Design</h1>
           <p class="mt-4 grey lh28 fs18">
@@ -413,7 +418,7 @@
             digital experience through top-tier design excellence.
           </p>
         </div>
-        <div class="col-md-4">
+        <div class="quality-cards">
           <img src="./images/icon-06.svg" alt="icon" />
           <h1 class="fs26 fw500 mt-4">All Essential Sections</h1>
           <p class="mt-4 grey lh28 fs18">
@@ -426,7 +431,7 @@
           </p>
         </div>
 
-        <div class="col-md-4">
+        <div class="quality-cards">
           <img src="./images/icon-07.svg" alt="icon" />
           <h1 class="fs26 fw500 mt-4">Speed Optimized</h1>
           <p class="mt-4 grey lh28 fs18">
@@ -439,7 +444,7 @@
           </p>
         </div>
 
-        <div class="col-md-4">
+        <div class="quality-cards">
           <img src="./images/icon-05.svg" alt="icon" />
           <h1 class="fs26 fw500 mt-4">Fully Customizable</h1>
           <p class="mt-4 grey lh28 fs18">
@@ -453,7 +458,7 @@
           </p>
         </div>
 
-        <div class="col-md-4">
+        <div class="quality-cards">
           <img src="./images/icon-06.svg" alt="icon" />
           <h1 class="fs26 fw500 mt-4">Regular Updates</h1>
           <p class="mt-4 grey lh28 fs18">
@@ -616,7 +621,9 @@
             </a>
           </div>
         </div>
-        <div class="contact-single-card contact-form-card p-md-5 p-3 p-lg-5 col-md-7">
+        <div
+          class="contact-single-card contact-form-card p-md-5 p-3 p-lg-5 col-md-7"
+        >
           <form
             method="post"
             action="https://formspree.io/f/xyyqalap"
@@ -670,11 +677,8 @@
                 type="text"
                 name="messagee"
                 placeholder="Enter message"
-                required
                 minlength="1"
-                class="form-control form-control-sm mt-2"
-              >
-              </textarea>
+                class="form-control form-control-sm mt-2"></textarea>
             </div>
 
             <div class="mb-2 d-grid mt-5">
@@ -689,8 +693,17 @@
     </main>
 
     <button id="scrollTopBtn" onclick="scrollToTop()">
-      <svg width="20" height="20" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+      <svg
+        width="20"
+        height="20"
+        fill="currentColor"
+        class="bi bi-arrow-up"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"
+        />
       </svg>
     </button>
     <!-- contact-us -->
