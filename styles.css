@@ -405,7 +405,10 @@ button {
   }
 }
 @media screen and (max-width : 900px) {
-.navbar-brand img {
+  .contact-single-card.contact-form-card {
+    margin-top: 50px;
+  }
+.navbar-brand {
   width: 30%;
 }
   .fs-md-466.fs46{
@@ -426,9 +429,9 @@ button {
   .dnn900{
     display: none;
   }
-  .grid{
+  /* .grid{
     display: grid;
-  }
+  } */
   .g50{
     gap: 50px;
   }
