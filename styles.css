@@ -390,15 +390,36 @@ button {
 .line{
   border-bottom: 1px solid rgba(128, 128, 128, 0.5) !important;
 }
-@media (min-width:901px) and (max-width:1300px) {
+.about-projects{
+  padding: 100px;
+}
+@media (min-width:901px) and (max-width:1199px) {
   .width80p{
     width: 90% !important;
   }
   .dnMobile{
     display: none !important;
   }
+  .about-projects{
+    padding: 70px;
+  }
 }
 @media screen and (max-width : 900px) {
+  .fs-md-466.fs46{
+    font-size: 26px !important;
+  }
+  .fs-md-466.lh66{
+   line-height: 36px !important;
+  }
+  .about-projects{
+    padding: 30px;
+  }
+  .dnMobile{
+    display: none !important;
+  }
+  .shapess{
+    display: none !important;
+  }
   .dnn900{
     display: none;
   }
