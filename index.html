@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nP Web Studio</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js"></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./images/np-web-studio-logo.png"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- header -->
+    <nav class="navbar navbar-expand-lg align-items-center">
+      <div class="container justify-content-between">
+        <a class="navbar-brand">
+          <img src="./images/np-web-studio-logo.png" />
+          <!-- <img src="./images/np-web-studio-logo.png" /> -->
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-around mt-3 mt-md-0 mt-lg-0"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link mx-md-5 pointer fw600">Home</a>
+            </li>
+            <li class="nav-item" onclick="scrollToSection('section3')">
+              <a class="nav-link mx-md-5 pointer fw600">Services</a>
+            </li>
+            <li class="nav-item" onclick="scrollToSection('section2')">
+              <a class="nav-link mx-md-5 pointer fw600">About Us</a>
+            </li>
+            <li class="nav-item" onclick="scrollToSection('section1')">
+              <a class="nav-link mx-md-5 pointer fw600">Contact</a>
+            </li>
+          </ul>
+
+          <div
+            class="d-flex justify-content-between align-items-center mt-3 mt-md-0 mt-lg-0"
+          >
+            <!-- <div class="sun-moon">
+        <svg
+          [ngClass]="sunMoonIcons ? 'sun' : 'mooon'"
+          (click)="sunMoonClick()"
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="black"
+          class="bi bi-brightness-high pointer"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+          />
+        </svg>
+        <svg
+          [ngClass]="!sunMoonIcons ? 'sun' : 'mooon'"
+          (click)="sunMoonClick()"
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="black"
+          class="bi bi-cloud-moon-fill pointer"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"
+          />
+        </svg>
+      </div> -->
+
+            <button
+              type="button"
+              class="primary-button ms-md-5"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Get Started Now
+            </button>
+            <!-- Button trigger modal -->
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- header -->
+
+    <!-- home section -->
+    <main class="header-main container my-5 position-relative">
+      <div class="d-md-flex">
+        <div class="col-md-5">
+          <h1 class="fs50 lh62 fw600">
+            We are specialize in UI/UX, Web Development with top frameworks and
+            libraries(Angular/React JS), Digital Marketing.
+          </h1>
+          <p class="grey mt-4 fs20 lh32">
+            When you choose us, you're choosing a partner dedicated to your
+            success. We're here to transform your ideas into reality, create
+            memorable user experiences, and elevate your online presence. Get in
+            touch with us, and let's embark on a journey to redefine your
+            digital presence.
+          </p>
+        </div>
+        <div
+          class="col-md-6 position-relative"
+          style="top: -100px; right: -115px"
+        >
+          <img
+            class="position-absolute width80p dnn900"
+            src="./images/hero.png"
+            alt="hero"
+          />
+          <img
+            class="position-absolute z--1 width80p dnn900"
+            src="./images/shape-04.svg"
+            alt="hero"
+          />
+        </div>
+      </div>
+      <img
+        class="position-absolute shapess dnMobile dnn900"
+        src="./images/shape-01.svg"
+        alt="shape images"
+        style="left: 44%; top: 30%"
+      />
+      <img
+        class="position-absolute shapess dnn900"
+        src="./images/shape-02.svg"
+        alt="shape images"
+        style="left: -6%; top: 10%"
+      />
+      <img
+        class="position-absolute"
+        src="./images/shape-03.svg"
+        alt="shape images"
+        style="right: 0%"
+      />
+
+      <button
+        type="button"
+        class="primary-button mt-4"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Get Started Now
+      </button>
+    </main>
+
+    <!-- home section -->
+
+    <!-- app- hero bottom part -->
+    <main class="hero-bottom my-5 py-5 container">
+      <h1 class="blue fs40 lh50 fw600 justify-content-center d-flex">
+        Ready to take your digital journey to the next level?
+      </h1>
+      <h1
+        class="blue fs40 fw600 lh50 justify-content-center d-flex mt-4 underline"
+      >
+        Contact us today to get started...
+      </h1>
+      <div class="mt-5 d-md-flex justify-content-between grid g50">
+        <div class="col-md-3 d-flex justify-content-between">
+          <div
+            class="height-content p30 brr50"
+            style="background: rgb(243 106 141)"
+          >
+            <img src="./images/icon-01.svg" alt="icon 01" />
+          </div>
+          <div class="ms-4">
+            <h1 class="fs26 fw500">24*7 Support</h1>
+            <p class="grey mt-3 lh22 fs16">
+              Experience peace of mind with our round-the-clock 24/7 support,
+              ensuring your product is always in safe hands
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-3 d-flex justify-content-between">
+          <div
+            class="height-content p30 brr50"
+            style="background: rgb(32 202 102)"
+          >
+            <img src="./images/icon-02.svg" alt="icon 01" />
+          </div>
+          <div class="ms-4">
+            <h1 class="fs26 fw500">Take Ownership</h1>
+            <p class="grey mt-3 lh22 fs16">
+              We take ownership of your goals, turning your vision into our
+              mission for success.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-3 d-flex justify-content-between">
+          <div
+            class="height-content p30 brr50"
+            style="background: rgb(250 145 97)"
+          >
+            <img src="./images/icon-03.svg" alt="icon 01" />
+          </div>
+          <div class="ms-4">
+            <h1 class="fs26 fw500">Team Work</h1>
+            <p class="grey mt-3 lh22 fs16">
+              We believe in the power of teamwork, where every member's
+              contribution is a vital piece in achieving greatness together.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- app- hero bottom part -->
+
+    <!-- app-why-choose-us -->
+    <main class="why-choose-main my-5 py-5 position-relative">
+      <div class="container">
+        <div class="align-items-center d-md-flex justify-content-between">
+          <div
+            class="col-md-6 d-flex align-items-center justify-content-around"
+          >
+            <div class="about-imgs-1">
+              <img src="./images/about-01.png" alt="about" /> <br />
+              <img
+                class="position-absolute t0"
+                src="./images/shape-05.svg"
+                alt="about"
+              />
+              <br />
+              <img class="mt-5" src="./images/about-02.png" alt="about" />
+            </div>
+            <div class="about-imgs-2 ms-5 position-relative">
+              <img
+                class="dnMobile dnn"
+                src="./images/about-03.png"
+                alt="about 2"
+              />
+              <img
+                class="position-absolute shapess l--0"
+                src="./images/shape-06.svg"
+                alt="about"
+                style="left: 30px; top: -100px"
+              />
+              <img
+                class="position-absolute dnMobile dnn"
+                src="./images/shape-07.svg"
+                alt="about"
+                style="left: 30px; bottom: -200px"
+              />
+            </div>
+          </div>
+          <div class="col-md-5 mt-5">
+            <h1 class="fs30 fw600 blue underline">Why Choose Us</h1>
+            <h2 class="fs40 lh52 fw500 mt-4">
+              We understand that choosing a web development partner is a
+              critical decision for your business.
+            </h2>
+            <h2 class="fs30 lh42 fw500 mt-4">
+              Here are the reasons to choose us.
+            </h2>
+
+            <div class="choose-content mt-5">
+              <h1 class="grey fs18 lh28">
+                <span class="blue fw600"> Expertise That Matters: </span> Our
+                team consists of experienced web developers who are passionate
+                about creating exceptional digital experiences. With a deep
+                understanding of the latest technologies and trends, we deliver
+                solutions that are not just functional but also future-proof.
+              </h1>
+
+              <h1 class="grey fs18 lh28 mt-4">
+                <span class="blue fw600"> Tailored Solutions: </span>
+                We recognize that every business is unique. That's why we take a
+                personalized approach to each project. We work closely with you
+                to understand your goals, challenges, and vision, ensuring that
+                our solutions are tailor-made to suit your specific needs.
+              </h1>
+
+              <h1 class="grey fs18 lh28 mt-4">
+                <span class="blue fw600"> Creative Excellence: </span>
+                We combine technical expertise with creative flair. Our
+                designers and developers collaborate to craft visually stunning
+                websites and web applications that leave a lasting impression on
+                your audience.
+              </h1>
+
+              <h1 class="grey fs18 lh28 mt-4">
+                <span class="blue fw600"> Timely Delivery: </span>
+                We value your time and understand the importance of meeting
+                deadlines. Our commitment to punctuality ensures that your
+                project is delivered on time, every time.
+              </h1>
+
+              <h1 class="grey fs18 lh28 mt-4">
+                <span class="blue fw600"> Transparent Communication: </span>
+                We believe that open and transparent communication is key to a
+                successful partnership. You'll have a dedicated point of contact
+                who will keep you informed at every stage of your project.
+              </h1>
+
+              <h1 class="grey fs18 lh28 mt-4">
+                <span class="blue fw600"> Cost-Effective Solutions: </span>
+                Quality doesn't have to come at a premium price. We offer
+                competitive pricing without compromising on the quality of our
+                work.
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section
+        class="mt-100 position-relative"
+        style="background: rgb(244 247 250); padding: 100px"
+      >
+        <div class="col-md-8 d-flex mx-auto text-center">
+          <h1 class="fs46 lh66 fw600">
+            We stay at the forefront of industry innovations, ensuring that your
+            web development project benefits from the latest advancements in
+            technology and design.
+          </h1>
+        </div>
+      </section>
+      <img
+        class="position-absolute"
+        style="bottom: 48px; width: 100%"
+        src="./images/shape-08.svg"
+        alt="shapes"
+      />
+      <img
+        class="position-absolute shapess"
+        style="bottom: 28%; left: 5%"
+        src="./images/shape-09.svg"
+        alt="shapes"
+      />
+      <img
+        class="position-absolute"
+        style="bottom: 18%; right: 5%"
+        src="./images/shape-10.svg"
+        alt="shapes"
+      />
+      <img
+        class="position-absolute shapess"
+        style="bottom: 5%; right: 28%"
+        src="./images/shape-11.svg"
+        alt="shapes"
+      />
+    </main>
+
+    <!-- app-why-choose-us -->
+
+    <!-- best quality services -->
+    <main class="best-quality-main container" id="section3">
+      <section class="col-md-8 mx-auto text-center">
+        <h1 class="fs46 lh56 fw600">
+          We Offer The Best Quality Service for Your business
+        </h1>
+        <p class="fs16 lh22 grey fw500 mt-4">
+          we offer superior web development services driven by an expert team
+          and cutting-edge technologies. We prioritize user-centric design,
+          on-time delivery, and transparent communication to ensure your
+          project's success. With a commitment to quality, innovation, and
+          client satisfaction, we're your trusted partner for exceptional web
+          solutions.
+        </p>
+      </section>
+      <section class="mt-5 quality-parts row rg100">
+        <div class="col-md-4">
+          <img src="./images/icon-04.svg" alt="icon" />
+          <h1 class="fs26 fw500 mt-4">Crafted for All</h1>
+          <p class="mt-4 grey lh28 fs18">
+            Signifies our commitment to inclusivity and accessibility in all
+            aspects of our work. we strive to create web solutions that cater to
+            diverse audiences, ensuring seamless user experiences regardless of
+            abilities or backgrounds. Our designs and development are
+            thoughtfully crafted to embrace universal accessibility standards,
+            making the web a more inclusive space for everyone.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img src="./images/icon-05.svg" alt="icon" />
+          <h1 class="fs26 fw500 mt-4">High-quality Design</h1>
+          <p class="mt-4 grey lh28 fs18">
+            "High-quality Design" is the cornerstone of our approach. It means
+            we meticulously craft visually captivating and user-centric designs.
+            Our team blends creativity with precision to deliver web solutions
+            that not only look stunning but also enhance functionality and user
+            satisfaction. We take pride in our commitment to elevating the
+            digital experience through top-tier design excellence.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img src="./images/icon-06.svg" alt="icon" />
+          <h1 class="fs26 fw500 mt-4">All Essential Sections</h1>
+          <p class="mt-4 grey lh28 fs18">
+            "All Essential Sections" underscores our dedication to comprehensive
+            web development. We ensure that every crucial aspect of your web
+            project, from user interfaces to functionality and content
+            presentation, is meticulously addressed. We believe that a
+            well-rounded digital presence includes all essential sections,
+            providing a holistic and engaging experience for your audience.
+          </p>
+        </div>
+
+        <div class="col-md-4">
+          <img src="./images/icon-07.svg" alt="icon" />
+          <h1 class="fs26 fw500 mt-4">Speed Optimized</h1>
+          <p class="mt-4 grey lh28 fs18">
+            "Speed Optimized" signifies our commitment to ensuring that your web
+            solutions load swiftly and efficiently. We employ cutting-edge
+            techniques to enhance website performance. We prioritize quick
+            loading times, responsive design, and optimized code to deliver an
+            exceptional user experience. Our focus on speed ensures that your
+            audience enjoys seamless interactions with your digital assets.
+          </p>
+        </div>
+
+        <div class="col-md-4">
+          <img src="./images/icon-05.svg" alt="icon" />
+          <h1 class="fs26 fw500 mt-4">Fully Customizable</h1>
+          <p class="mt-4 grey lh28 fs18">
+            "Fully Customizable" embodies our dedication to tailoring web
+            solutions to your unique needs. We provide flexibility and
+            versatility in design and functionality. Our goal is to empower you
+            with the ability to shape your digital presence precisely as you
+            envision it. With our fully customizable solutions, you have the
+            freedom to create a web experience that reflects your brand identity
+            and fulfills your specific objectives.
+          </p>
+        </div>
+
+        <div class="col-md-4">
+          <img src="./images/icon-06.svg" alt="icon" />
+          <h1 class="fs26 fw500 mt-4">Regular Updates</h1>
+          <p class="mt-4 grey lh28 fs18">
+            "Regular Updates" underscore our commitment to keeping your web
+            solutions current and secure. We provide timely updates to ensure
+            that your digital assets remain efficient, safe, and aligned with
+            evolving trends and technologies. Our proactive approach guarantees
+            that your web presence stays competitive, engaging, and up-to-date,
+            delivering long-term value to your audience.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- best quality services -->
+
+    <!-- app-portfolio -->
+
+    <main
+      class="portfolio-main py-5 mt-5 text-center"
+      style="background: rgb(244 247 250)"
+    >
+      <div class="container py-5">
+        <div class="col-md-7 mx-auto pb-5">
+          <h1 class="fs40 lh52 fw600">
+            We build your websites/web applications with top notch-quality.
+          </h1>
+          <p class="mt-4 grey fs20 lh28">
+            Top-quality software means delivering robust, user-friendly
+            solutions that meet the highest industry standards, ensuring
+            reliability and exceptional performance.
+          </p>
+        </div>
+        <img
+          class="position-absolute t0 r0 shapess"
+          src="./images/shape-11.svg"
+          alt="shape"
+        />
+
+        <!-- projects -->
+        <div class="portfolio-container container">
+          <!-- Dummy Portfolio Card 1 -->
+          <div class="card pointer">
+            <div class="portfolio-image-part">
+              <!-- <img src="./images/socially-1.svg" alt="socially logo" /> -->
+              <img src="./images/logo-color.png" alt="socially" />
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Socially</h3>
+              <h5 class="card-description">
+                Indian based social media platform, developing using Angular
+                Framework. It's not only a social media, it's more than that.
+                We're planning to introduce some free services & information
+                which is very useful to public. <br />
+                <p class="mt-2" style="color: orange">
+                  **It's still under development**
+                </p>
+              </h5>
+              <!-- <a href="#" class="card-btn">View Details</a> -->
+            </div>
+          </div>
+        </div>
+        <!-- projects -->
+
+        <img
+          class="position-absolute b0 l0"
+          src="./images/shape-09.svg"
+          alt="shapess"
+        />
+      </div>
+    </main>
+
+    <!-- app-portfolio -->
+
+    <!-- app-testimonials -->
+    <main class="testimonials-main" id="section2">
+      <!-- <section class="testimonials-caurosel"></section> -->
+
+      <section
+        class="clients-projects-main py-100 position-relative"
+        style="background: rgb(236 240 245)"
+      >
+        <div class="container">
+          <div
+            class="d-md-flex justify-content-around align-items-center grid g50"
+          >
+            <div class="projects text-center">
+              <h1 class="fs56 fw700">01</h1>
+              <h2 class="fs26 grey fw500 mt-3">Happy Clients</h2>
+            </div>
+            <div class="projects text-center">
+              <h1 class="fs56 fw700">01</h1>
+              <h2 class="fs26 grey fw500 mt-3">Projects Completed</h2>
+            </div>
+          </div>
+        </div>
+        <img
+          class="position-absolute b0 shapess"
+          style="right: 10%"
+          src="./images/shape-11.svg"
+          alt="shapess"
+        />
+        <img
+          class="position-absolute t0 dnMobile dnn"
+          style="left: -150px !important"
+          src="./images/shape-15.svg"
+          alt="shapess"
+        />
+      </section>
+    </main>
+
+    <!-- app-testimonials -->
+
+    <!-- contact-us -->
+    <main
+      class="contact-main"
+      id="section1"
+      style="background-color: rgb(244 247 250)"
+    >
+      <div class="container text-center">
+        <h1 class="fs46 fw600">Let’s Stay Connected</h1>
+        <p class="grey fs20 fw500 mt-4">
+          <span class="blue underline"> Stay connected </span> for the Latest
+          Updates.
+        </p>
+      </div>
+      <section
+        class="contact-cards container d-md-flex mt-100 justify-content-between grid g50"
+      >
+        <div
+          class="contact-single-card p-5 col-md-4"
+          style="height: fit-content !important"
+        >
+          <div class="email-part">
+            <h1 class="fs18 fw500 mb-3">Email Address</h1>
+            <a
+              class="fs16 fw500 blue a-mail"
+              href="mailto:npwebstudio01@gmail.com"
+              >npwebstudio01@gmail.com</a
+            >
+          </div>
+          <div class="line my-5"></div>
+          <div class="socila-links">
+            <h1 class="fs18 fw500">Social Links</h1>
+            <a
+              href="https://www.linkedin.com/in/np-web-studio-065840291/"
+              target="_blank"
+            >
+              <svg
+                width="26"
+                height="26"
+                fill="currentColor"
+                class="bi bi-linkedin mt-4 pointer"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="contact-single-card contact-form-card p-5 col-md-7">
+          <form
+            method="post"
+            action="https://formspree.io/f/xyyqalap"
+            id="myForm"
+          >
+            <div class="mt-3">
+              <label for="name" class="fs18 fw500">Name :</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                required
+                minlength="1"
+                maxlength="250"
+                class="form-control form-control-sm mt-2"
+              />
+            </div>
+
+            <div class="my-4">
+              <label for="email" class="fs18 fw500">Email :</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="email@provider.com"
+                required
+                minlength="1"
+                maxlength="250"
+                class="form-control form-control-sm mt-2"
+              />
+            </div>
+
+            <div class="my-4">
+              <label for="subjectt" class="fs18 fw500">Subject :</label>
+              <input
+                type="text"
+                id="subjectt"
+                name="subjectt"
+                placeholder="Enter subject"
+                required
+                minlength="1"
+                maxlength="250"
+                class="form-control form-control-sm mt-2"
+              />
+            </div>
+
+            <div class="my-4">
+              <label for="messagee" class="fs18 fw500">Message :</label>
+              <textarea
+                type="text"
+                id="messagee"
+                name="messagee"
+                placeholder="Enter message"
+                required
+                minlength="1"
+                class="form-control form-control-sm mt-2"
+              >
+              </textarea>
+            </div>
+
+            <div class="mb-2 d-grid mt-5">
+              <button type="submit" class="primary-button" onclick="validate()">
+                <!-- (click)="validate()" -->
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <button id="scrollTopBtn" onclick="scrollToTop()">
+      <svg width="20" height="20" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+      </svg>
+    </button>
+    <!-- contact-us -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <main class="contact-main" style="padding-top: 0 !important">
+              <section class="contact-cards">
+                <div class="contact-single-card contact-form-card p-2">
+                  <form
+                    method="post"
+                    action="https://formspree.io/f/xyyqalap"
+                    id="myForm"
+                  >
+                    <div class="mt-3">
+                      <label for="name" class="fs18 fw500">Name :</label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your name"
+                        required
+                        minlength="1"
+                        maxlength="250"
+                        class="form-control form-control-sm mt-2"
+                      />
+                    </div>
+
+                    <div class="my-4">
+                      <label for="email" class="fs18 fw500">Email :</label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="email@provider.com"
+                        required
+                        minlength="1"
+                        maxlength="250"
+                        class="form-control form-control-sm mt-2"
+                      />
+                    </div>
+
+                    <div class="my-4">
+                      <label for="subjectt" class="fs18 fw500">Subject :</label>
+                      <input
+                        type="text"
+                        id="subjectt"
+                        name="subjectt"
+                        placeholder="Enter subject"
+                        required
+                        minlength="1"
+                        maxlength="250"
+                        class="form-control form-control-sm mt-2"
+                      />
+                    </div>
+
+                    <div class="my-4">
+                      <label for="messagee" class="fs18 fw500">Message :</label>
+                      <textarea
+                        type="text"
+                        id="messagee"
+                        name="messagee"
+                        placeholder="Enter message"
+                        required
+                        minlength="1"
+                        class="form-control form-control-sm mt-2"
+                      >
+                      </textarea>
+                    </div>
+
+                    <div class="mb-2 d-grid mt-5">
+                      <button
+                        type="submit"
+                        class="primary-button"
+                        onclick="validate()"
+                      >
+                        <!-- (click)="validate()" -->
+                        Submit
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </section>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Get the button element
+      var scrollTopBtn = document.getElementById("scrollTopBtn");
+
+      // Show or hide the button based on the scroll position
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          scrollTopBtn.style.display = "block";
+        } else {
+          scrollTopBtn.style.display = "none";
+        }
+      }
+
+      // Scroll to the top when the button is clicked
+      function scrollToTop() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+      }
+    </script>
+
+    <script>
+      function scrollToSection(sectionId) {
+        // Get the section element by its ID
+        var section = document.getElementById(sectionId);
+
+        // Scroll to the section
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    </script>
+
+    <!-- full length code -->
+  </body>
+</html>
