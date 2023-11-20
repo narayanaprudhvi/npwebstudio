@@ -405,6 +405,9 @@ button {
   }
 }
 @media screen and (max-width : 900px) {
+.navbar-brand img {
+  width: 30%;
+}
   .fs-md-466.fs46{
     font-size: 26px !important;
   }
